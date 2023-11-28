@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(PHILIPPINE-EAGLE.jpg);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after {
+    content: " ";
+    height: 3px;
+    width: 0;
+    background-color: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-size: 70px;
+    margin-top: 80px;
+}
+
+.tab-content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50);
+    text-align: center;
+    color: white;
+}
+
+.tab-content h1 {
+    font-size: 70px;
+    margin-top: 0px;
+}
+
+button {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+#info p {
+    font-size: 18px; 
+    line-height: 1.6;
+    margin-top: 20px; 
+}
+#members {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    z-index: -2;
+  }
+
+.pyramid-background {
+    padding: 50px 0; 
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin-bottom: 20px; 
+}
+
+.member img {
+    max-width: 100%;
+    border-radius: 50%; 
+    margin-bottom: 10px;
+}
+
+.member a {
+    font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul {
+        margin-top: 20px;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .navbar ul li::after {
+        bottom: -5px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .content h1,
+    .tab-content h1 {
+        font-size: 36px;
+        margin-top: 40px;
+    }
+
+    button {
+        width: 150px;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    #members {
+        width: 90%;
+    }
+
+    .pyramid-background {
+        padding: 10px 0;
+    }
+
+   
+    .navbar ul li {
+        margin-right: 15px;
+    }
+
+ 
+    .navbar ul li:last-child {
+        margin-right: 0;
+    }
+}
